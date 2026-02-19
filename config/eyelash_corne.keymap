@@ -134,7 +134,7 @@
             display-name = "MAC";
             bindings = <
 &kp TAB    &kp Q       &kp W       &kp E       &kp R       &kp T                             &mmv MOVE_UP                     &kp Y        &kp U       &kp I       &kp O       &kp P        &kp BSPC
-&kp LGUI   &kp A       &kp S       &kp D       &kp F       &kp G                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT &kp H        &kp J       &kp K       &kp L       &kp SEMI     &kp SQT
+&kp LCTRL   &kp A       &kp S       &kp D       &kp F       &kp G                   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT &kp H        &kp J       &kp K       &kp L       &kp SEMI     &kp SQT
 &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B      &kp SPACE              &mmv MOVE_DOWN                   &kp N        &kp M       &kp COMMA   &kp DOT     &kp FSLH     &lt_c FUNC ESC
                                    &kp LALT    &mo LOWER   &hm LGUI RET                                                       &kp SPACE   &mo RAISE   &kp RALT
             >;
