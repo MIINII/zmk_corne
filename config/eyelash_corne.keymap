@@ -75,6 +75,20 @@
             tap-ms = <100>;
         };
 
+        zoom_encoder: zoom_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LA(LG(MINUS))>, <&kp LA(LG(EQUAL))>;
+            tap-ms = <20>;
+        };
+
+        zoom_win_encoder: zoom_win_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(MINUS)>, <&kp LC(EQUAL)>;
+            tap-ms = <100>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -127,7 +141,7 @@
 &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B      &kp SPACE              &mmv MOVE_DOWN                   &kp N        &kp M       &kp COMMA   &kp DOT     &kp FSLH     &lt_c FUNC ESC
                                    &kp LALT    &mo LOWER   &hm LCTRL RET                                                      &kp SPACE   &mo RAISE   &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         mac_layer {
@@ -138,7 +152,7 @@
 &kp LSHFT  &kp Z       &kp X       &kp C       &kp V       &kp B      &kp SPACE              &mmv MOVE_DOWN                   &kp N        &kp M       &kp COMMA   &kp DOT     &kp FSLH     &lt_c FUNC ESC
                                    &kp LALT    &mo LOWER   &hm LGUI RET                                                       &kp SPACE   &mo RAISE   &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -149,7 +163,7 @@
 &kp LSHFT  &kp CAPS    &kp KP_SLASH &kp GRAVE  &kp LBKT    &kp LBRC   &kp C_MUTE             &mmv MOVE_DOWN                   &kp RBRC     &kp RBKT     &kp MINUS   &kp EQUAL  &kp FSLH     &trans
                        &kp LALT    &trans      &hm LGUI RET                                                       &kp SPACE    &mo RAISE   &kp COLON
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&zoom_encoder>;
         };
 
         raise_layer {
@@ -171,7 +185,7 @@
 &trans     &kp CAPS    &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &bt BT_CLR &mmv MOVE_DOWN              &none        &none        &none       &bootloader &soft_off    &trans
                        &none       &none       &to WIN                                                             &to MAC      &trans      &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
