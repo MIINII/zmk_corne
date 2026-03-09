@@ -28,7 +28,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - {t: '''', h: '$$mdi:keyboard-return$$', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -77,7 +77,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - {t: '''', h: '$$mdi:keyboard-return$$', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
